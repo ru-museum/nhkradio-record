@@ -100,11 +100,11 @@ NHKラジオ放送番組録音（第1、第2、FM）
 # 定時録音
   
 - CRON を使い定時に自動録音が可能です。
-- **username** には root か ユーザー名 が入ります。  
+- **username** には通常 root か ユーザー名 が入ります。  
 ```
 # vi /etc/crontab  
 
-// 月〜金曜日 7 時 50 分に起動、40 秒後に開始し 8 分間録音する。　
+// 月〜金曜日 7 時 50 分に起動し 8 分間録音する。　
 50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -c r1 -r 00:08:00 -t ニュース・天気予報  
 ```
 
