@@ -127,8 +127,8 @@ SLPSECONDS=36 # 開始時刻遅延初期値： 秒
 
 sleep 36　  
 ```
-- CRON でも時間の**ずれ**を修正することが出来ます。
-　**sleep 40;** （秒）を設定します。  
+- CRON でも時間の**ずれ**を修正することが出来ます。  
+　**40** 秒を設定する場合：**sleep 40;**（<strong>；</strong>に注意）  
  ```
 // 月〜金曜日 7 時 50 分に起動、40 秒後に開始し 8 分間録音する。　
 50 7 * * 1-5 sleep 40; username bash /your/directory/name/nhkradio-record.sh …………  
