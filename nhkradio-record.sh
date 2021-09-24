@@ -142,7 +142,7 @@ if [ $CHANNEL != "" ]; then
   # 処理メッセージ：４
   echo ">> 録音処理中です"
 
-  # 録音して保存 quiet fatal
+  # 録音して保存
   ffmpeg -i "${M3U8URL}" -loglevel error -t "${REC_TIME}" -c copy "${SAVEFILE_PATH}".m4a
 
   # 処理メッセージ：５
