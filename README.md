@@ -16,7 +16,7 @@ NHKラジオ放送番組録音（第1、第2、FM）
 2. nhkradio-record.sh にアクセス権の実行を許可します。  
  　※ CRON で定時録音をしない場合は不要。
  ```
- # chmod 755 nhkradio2-langs-record.sh
+ # chmod 755 nhkradio-record.sh
  ```
 3. オプションを付して実行します。  
   **【設定値】**  
@@ -117,7 +117,7 @@ NHKラジオ放送番組録音（第1、第2、FM）
 
 　【例】開始時刻を**36秒**遅らせる  
 - オプションで指定する場合：-s **36**  
-　　……/nhkradio2-langs-record.sh ……… **-s 36**  
+　　……/nhkradio-record.sh ……… **-s 36**  
 
 - 直接書き換える場合：
 ```
@@ -146,7 +146,7 @@ sleep 40
 # テスト  
 - 録音時間を**10秒**程度に設定し実動テストをして下さい。
 ```
-sh ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHKきょうのニュース
+sh ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHK番組録音テスト
 ```
 
 # 録音ファイル  
