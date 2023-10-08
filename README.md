@@ -14,7 +14,6 @@ NHKラジオ放送番組録音（第1、第2、FM）
 1. 作業フォルダを作成し nhkradio-record.sh を置きます。  
 
 2. nhkradio-record.sh にアクセス権の実行を許可します。  
- 　※ CRON で定時録音をしない場合は不要。
  ```
  # chmod 755 nhkradio-record.sh
  ```
@@ -90,17 +89,18 @@ NHKラジオ放送番組録音（第1、第2、FM）
 </table>
 
 **【実行例】**  
-   
+　※ シェルは **bash** を使用して下さい。
 - ラジオ第1番組「NHKきょうのニュース」を 15 分間録音  
-  **sh ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース**    
+  $ **bash ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース**    
 - 同 5 分 30 秒後に録音（予約）  
-  **sh ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース -s 5m 30s**    
+  $ **bash ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース -s 5m 30s**    
   
 
 # 定時録音
   
 - CRON を使い定時に自動録音が可能です。
 - **username** には通常 root か ユーザー名 が入ります。  
+　※ シェルは **bash** を指定して下さい。
 ```
 # vi /etc/crontab  
 
@@ -144,9 +144,10 @@ sleep 40
 ```
 
 # テスト  
-- 録音時間を**10秒**程度に設定し実動テストをして下さい。
+- 録音時間を**10秒**程度に設定し実動テストをして下さい。  
+ 　※ シェルは **bash** を使用して下さい。
 ```
-sh ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHK番組録音テスト
+$ bash ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHK番組録音テスト
 ```
 
 # 録音ファイル  
