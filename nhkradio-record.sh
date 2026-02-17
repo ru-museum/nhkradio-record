@@ -4,22 +4,26 @@ set -euo pipefail
 
 # --------------------------------------------------
 #
-# NHKラジオ放送番組録音（第1、第2、FM）
+# NHKラジオ放送番組録音（AM、FM）
 #
 # --------------------------------------------------
 #【注記】
-# ストリーミング配信URLは 2021年9月現在変更されています。
+# 現在のラジオ3波（ラジオ第1放送、ラジオ第2放送、FM放送）は、
+# 2026年度の番組改定(3月30日)により、「NHK AM」と「NHK FM」
+# の2波に再編されました。
+# 
+# ストリーミング配信URL
+#  AM: https://simul.drdi.st.nhk/live/3/joined/master.m3u8
+#  FM: https://simul.drdi.st.nhk/live/5/joined/master.m3u8
 # 放送波URLは以下で取得出来ます。
-# https://www.nhk.or.jp/radio/config/config_web.xml
+#  https://www.nhk.or.jp/radio/config/config_web.xml
 
-# URL 共通部
-URLHEAD="https://radio-stream.nhk.jp/hls/live"
+URLHEAD="https://simul.drdi.st.nhk/live"
 URLTAIL="master.m3u8"
-# NHKラジオ放送：第1、第2、FM
+# NHKラジオ放送：AM、FM
 declare -A NHK_URIS=(
-  ["r1"]="2023229/nhkradiruakr1"
-  ["r2"]="2023501/nhkradiruakr2"
-  ["fm"]="2023507/nhkradiruakfm"
+  ["am"]="3/joined"
+  ["fm"]="5/joined"
 )
 
 # 作業ディレクトリの PATH を取得。
@@ -35,7 +39,7 @@ DATE2=`date '+%H:%M'`
 DATE="${YEAR}${DATE1}${_DAY}-${DATE2}"
 
 # DEFAULT 初期値：入力値のない場合の録音設定値
-CHANNEL="r1"        # NHKラジオ第一放送
+CHANNEL="am"        # NHKラジオ第一放送
 RECTIMES="00:15:00" # 録音時間： 15分
 SLPSECONDS=0        # 開始時刻遅延： 秒
 USERTITLE=""        # ユーザー設定の番組タイトル
@@ -45,21 +49,20 @@ USERTITLE=""        # ユーザー設定の番組タイトル
 function dspHelp {
   cat <<EOM
 --------------------------------------------------------------------------------------------------------------
-Usage: sh ./$(basename "$0") -c [ r1 | r2 | fm ] -r [ 00:00:00 ] -t [ 番組タイトル ] -s [ 00(秒) | 00m 00s ]
+Usage: bash ./$(basename "$0") -c [ am | fm ] -r [ 00:00:00 ] -t [ 番組タイトル ] -s [ 00(秒) | 00m 00s ]
 --------------------------------------------------------------------------------------------------------------
   -h            ヘルプ（この画面）を表示します。
   -c [VALUE]    録音するNHKラジオ放送のチャンネルを指定します。
-                [設定値]  ラジオ第1 ： r1
-                          ラジオ第2 ： r2
-                          NHK-FM    ： fm
-                【例】-c r2（ラジオ第2）
-                ※ デフォルト(未入力)は ラジオ第1 （r1）が設定されます。
+                [設定値]  NHK-AM ： am
+                          NHK-FM ： fm
+                【例】-c am（NHK-AM）
+                ※ デフォルト(未入力)は NHK-AM （am）が設定されます。
   -r [VALUE]    録音する時間を指定します。
                     【例】-r 00:30:00 （30分）
                 ※ デフォルト(未入力)は15分
   -t [VALUE]    録音する番組タイトル名。
                     【例】-t NHKきょうのニュース
-                ※ 無記入の場合は、「NHKR1放送番組」が設定されます。
+                ※ 無記入の場合は、「NHKAM放送番組」が設定されます。
   -s [VALUE]    開始時刻を遅延させます（予約的機能として使用されます）
                     【例】-s 60 　　：60秒後に録音開始
                       　　-s 5m 30s ：5分30秒後に録音開始
@@ -106,7 +109,7 @@ echo ">> 録音処理の準備を行っています"
 
 # ユーザー設定の番組タイトル
 TITLE="${USERTITLE}"
-# 指定が無ければ "NHKR1放送番組"
+# 指定が無ければ "NHK-AM放送番組"
 if [ "$TITLE" = "" ]; then
    TITLE="NHK${CHANNEL^^}放送番組"
 fi
