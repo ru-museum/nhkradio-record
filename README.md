@@ -1,10 +1,11 @@
 # nhkradio-record
-NHKラジオ放送番組録音（第1、第2、FM）
+NHKラジオ放送番組録音（AM、FM）
 
-- これはNHKラジオ放送（らじる★らじる：第1、第2、FM）の番組を**録音**するものです。
+- これはNHKラジオ放送（NHK ONE らじる★らじる：AM、FM）の番組を**録音**するものです。
 - 放送中の全ての番組を録音出来ます（定時録音も可能）。
-
-[NHKラジオ らじる★らじる / ネットラジオ番組表](https://www.nhk.or.jp/radio/hensei/)  
+- 2026年度の番組改定（3月30日）に伴う再編（2波体制）に対応しました。  
+[ラジオ再編](https://www.nhk.or.jp/radio/saihen/)
+- [NHKラジオ らじる★らじる / ネットラジオ番組表](https://www.nhk.or.jp/radio/hensei/)  
 
 # 動作環境  
 - Linux（Debian: bash 使用）
@@ -35,21 +36,18 @@ NHKラジオ放送番組録音（第1、第2、FM）
 
 <tr>
   <td>チャンネル</td>
-  <td>-c　 [　r1　|　r2　|　fm　]</td>
+  <td>-c　 [　am　|　fm　]</td>
   <td>
     録音するNHKラジオ放送のチャンネルを指定します。 
 <table>
 <tr>
-  <td>ラジオ第1</td><td>r1</td>
-</tr>
-<tr>
-  <td>ラジオ第2</td><td>r2</td>
+  <td>NHK-AM</td><td>am</td>
 </tr>
 <tr>
   <td>NHK-FM</td><td>fm</td>
 </tr>
 </table>
-    ※ デフォルト(未入力)は ラジオ第1 （r1）が設定されます。
+    ※ デフォルト(未入力)は NHK-AM （am）が設定されます。
   </td>
 </tr>
   
@@ -66,11 +64,11 @@ NHKラジオ放送番組録音（第1、第2、FM）
   
 <tr>
   <td>番組タイトル</td>
-  <td>-t　TITLE</td>
+  <td>-t　"TITLE"</td>
   <td>
 録音する番組タイトル名。<br>  
 【例】-t NHKきょうのニュース<br>  
-※ 無記入の場合は、「NHKR1放送番組」が設定されます。
+※ 無記入の場合は、「NHKAM放送番組」が設定されます。
   
   </td>
 </tr>
@@ -90,10 +88,10 @@ NHKラジオ放送番組録音（第1、第2、FM）
 
 **【実行例】**  
 　※ シェルは **bash** を使用して下さい。
-- ラジオ第1番組「NHKきょうのニュース」を 15 分間録音  
-  $ **bash ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース**    
+- NHK-AM番組「NHKきょうのニュース」を 15 分間録音  
+  $ **bash ./nhkradio-record.sh -c am -r 00:15:00 -t NHKきょうのニュース**    
 - 同 5 分 30 秒後に録音（予約）  
-  $ **bash ./nhkradio-record.sh -c r1 -r 00:15:00 -t NHKきょうのニュース -s 5m 30s**    
+  $ **bash ./nhkradio-record.sh -c am -r 00:15:00 -t NHKきょうのニュース -s 5m 30s**    
   
 
 # 定時録音
@@ -105,7 +103,7 @@ NHKラジオ放送番組録音（第1、第2、FM）
 # vi /etc/crontab  
 
 // 月〜金曜日 7 時 50 分に起動し 8 分間録音する。　
-50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -c r1 -r 00:08:00 -t ニュース・天気予報  
+50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -c am -r 00:08:00 -t ニュース・天気予報  
 ```
 
 ### 録音開始時間の微調整   
@@ -143,11 +141,11 @@ sleep 40
 49 8 * * 1-5 sleep 40; username bash /your/directory/name/nhkradio-record.sh ………… 
 ```
 
-# テスト  
-- 録音時間を**10秒**程度に設定し実動テストをして下さい。  
+# 実働前テスト  
+- 録音時間を**10秒**程度に設定し実動前のテストを行って下さい。  
  　※ シェルは **bash** を使用して下さい。
 ```
-$ bash ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHK番組録音テスト
+$ bash ./nhkradio-record.sh -c am -r 00:00:10 -t NHK番組録音テスト
 ```
 
 # 録音ファイル  
@@ -156,9 +154,18 @@ $ bash ./nhkradio-record.sh -c r1 -r 00:00:10 -t NHK番組録音テスト
 - 保存された **m4a** は音声データフォーマットであり、iTunes や通常のプレイヤーで視聴出来ます。 
 
 # 注意  
-- 配信 URL は時期は不明ですが変更されています。  
+- ストリーミング配信URLは変更されています。  
+<!--
 旧URL: "https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8"  
 新URL: "https://radio-stream.nhk.jp/hls/live/2023501/nhkradiruakr2/master.m3u8"
+-->
+　【東京の場合】  
+　　　AM: https://simul.drdi.st.nhk/live/3/joined/master.m3u8  
+　　　FM: https://simul.drdi.st.nhk/live/5/joined/master.m3u8  
+  　　※ 回線の都合等、他地域からの配信が必要な場合は、以下でURIを取得出来ます。  
+    　　　ソース内の**番号部分**を変更して下さい。  
+  　　　https://www.nhk.or.jp/radio/config/config_web.xml
+
 - **録音データは著作権上私的利用のみに限定されていますのでご注意下さい。**
 
 
