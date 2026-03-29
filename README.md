@@ -41,7 +41,7 @@ NHKラジオ放送番組録音（AM、FM）
 
 <tr>
   <td>録音する番組</td>
-  <td>-i　 [　ID　]</td>
+  <td>-i [ ID ]</td>
   <td>
  「番組表」より録音する番組の「ID番号」を指定します。<br>  
  【例】-i 12 <br>  
@@ -51,7 +51,7 @@ NHKラジオ放送番組録音（AM、FM）
 
 <tr>
   <td>放送波（チャンネル）</td>
-  <td>-w　 [ am | fm ]</td>
+  <td>-w [ am | fm ]</td>
   <td>
     録音するNHKラジオ放送のチャンネルを指定します。 
 <table>
@@ -68,7 +68,7 @@ NHKラジオ放送番組録音（AM、FM）
   
 <tr>
   <td>録音時間</td>
-  <td>-r　[ 00:00:00 ]  </td>
+  <td>-r [ 00:00:00 ]  </td>
   <td>
  録音する時間を指定します。<br>  
  【例】-r　00:30:00 （30分）<br>  
@@ -79,7 +79,7 @@ NHKラジオ放送番組録音（AM、FM）
   
 <tr>
   <td>番組タイトル</td>
-  <td>-t　[ TITLE ]</td>
+  <td>-t [ TITLE ]</td>
   <td>
 録音する番組タイトル名。<br>  
 【例】-t NHKきょうのニュース<br>  
@@ -89,7 +89,7 @@ NHKラジオ放送番組録音（AM、FM）
 
  <tr>
   <td>録音ディレクトリ</td>
-  <td>-d　 [ directory ]</td>
+  <td>-d [ directory ]</td>
   <td>
  保存ディレクトリ名を指定します。<br>  
  【例】-d audio <br>  
