@@ -51,7 +51,7 @@ NHKラジオ放送番組録音（AM、FM）
 
 <tr>
   <td>放送波（チャンネル）</td>
-  <td>-w　 [　am　|　fm　]</td>
+  <td>-w　 [ am | fm ]</td>
   <td>
     録音するNHKラジオ放送のチャンネルを指定します。 
 <table>
@@ -89,7 +89,7 @@ NHKラジオ放送番組録音（AM、FM）
 
  <tr>
   <td>録音ディレクトリ</td>
-  <td>-d　 [　directory　]</td>
+  <td>-d　 [ directory ]</td>
   <td>
  保存ディレクトリ名を指定します。<br>  
  【例】-d audio <br>  
