@@ -31,7 +31,7 @@ NHKラジオ放送番組録音（AM/FM）
   
 <table>
 <tr>
-  <th>オプション</th><th>記述</th><th>説明</th>
+  <th>オプション</th><th>コマンド</th><th>説明</th>
 </tr>  
 
 <tr>
