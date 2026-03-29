@@ -1,5 +1,5 @@
 # nhkradio-record
-NHKラジオ放送番組録音（AM、FM）
+NHKラジオ放送番組録音（AM/FM）
 
 # 概要
 - これはNHKラジオ放送（NHK ONE らじる★らじる：AM / FM）の番組を**録音**するものです。
