@@ -15,6 +15,9 @@ NHKラジオ放送番組録音（AM/FM）
 # 動作環境  
 - Linux（Debian: bash 使用）
 - ffmpeg のインストールが必要です。
+ ```
+ # apt-get install ffmpeg
+ ```
 
 # 録音方法  
 1. 作業フォルダを作成し nhkradio-record.sh を置きます。  
