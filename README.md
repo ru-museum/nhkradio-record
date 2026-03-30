@@ -179,91 +179,94 @@ NHKラジオ放送番組録音（AM/FM）
 <td>13</td><td>まいにちフランス語 </td><td>FM</td><td>月〜金</td><td>初/応</td><td>2:00 </td><td>15</td><td>1-5</td>
 </tr>
 <tr>
-</td><td>14</td><td>まいにちロシア語</td><td>FM</td><td>月〜金</td><td>初/応</td><td>2:30 </td><td>15</td><td>1-5</td>
+<td>14</td><td>まいにちロシア語</td><td>FM</td><td>月〜金</td><td>初/応</td><td>2:30 </td><td>15</td><td>1-5</td>
 </tr>
 <tr>
-</td><td>15</td><td>ポルトガル語講座-入門/ステップアップ</td><td>FM</td><td>日 </td><td></td><td>1:00 </td><td>15</td><td>0 </td>
+<td>15</td><td>ポルトガル語講座-入門/ステップアップ</td><td>FM</td><td>日 </td><td></td><td>1:00 </td><td>15</td><td>0 </td>
 </tr>
 <tr>
 <td colspan="8">NHK高校講座</td>
 </tr>
 <tr>
-</td><td>16</td><td>NHK高校講座-英語コミュニケーションⅡ </td><td>FM</td><td>火 </td><td></td><td>3:40 </td><td>20</td><td>2 </td>
+<td>16</td><td>NHK高校講座-英語コミュニケーションⅡ </td><td>FM</td><td>火 </td><td></td><td>3:40 </td><td>20</td><td>2 </td>
 </tr>
 <tr>
-</td><td>17</td><td>NHK高校講座-英語コミュニケーションⅢ </td><td>FM</td><td>金 </td><td></td><td>3:00 </td><td>20</td><td>5 </td>
+<td>17</td><td>NHK高校講座-英語コミュニケーションⅢ </td><td>FM</td><td>金 </td><td></td><td>3:00 </td><td>20</td><td>5 </td>
 </tr>
 <tr>
-</td><td>18</td><td>NHK高校講座-音楽Ⅰ</td><td>FM</td><td>金 </td><td></td><td>3:40 </td><td>20</td><td>5 </td>
+<td>18</td><td>NHK高校講座-音楽Ⅰ</td><td>FM</td><td>金 </td><td></td><td>3:40 </td><td>20</td><td>5 </td>
 </tr>
 <tr>
-</td><td>19</td><td>NHK高校講座-古典探究</td><td>FM</td><td>土 </td><td></td><td>3:00 </td><td>20</td><td>6 </td>
+<td>19</td><td>NHK高校講座-古典探究</td><td>FM</td><td>土 </td><td></td><td>3:00 </td><td>20</td><td>6 </td>
 </tr>
 <tr>
-</td><td>20</td><td>NHK高校講座-数学Ⅱ</td><td>FM</td><td>火・水</td><td></td><td>3:20 </td><td>20</td><td>2-3</td>
+<td>20</td><td>NHK高校講座-数学Ⅱ</td><td>FM</td><td>火・水</td><td></td><td>3:20 </td><td>20</td><td>2-3</td>
 </tr>
 <tr>
-</td><td>21</td><td>NHK高校講座-政治・経済</td><td>FM</td><td>日 </td><td></td><td>3:20 </td><td>20</td><td>0 </td>
+<td>21</td><td>NHK高校講座-政治・経済</td><td>FM</td><td>日 </td><td></td><td>3:20 </td><td>20</td><td>0 </td>
 </tr>
 <tr>
-</td><td>22</td><td>NHK高校講座-日本史探究</td><td>FM</td><td>木 </td><td></td><td>3:00 </td><td>20</td><td>4 </td>
+<td>22</td><td>NHK高校講座-日本史探究</td><td>FM</td><td>木 </td><td></td><td>3:00 </td><td>20</td><td>4 </td>
 </tr>
 <tr>
-</td><td>23</td><td>NHK高校講座-文学国語</td><td>FM</td><td>火・水</td><td></td><td>3:00 </td><td>20</td><td>2-3</td>
+<td>23</td><td>NHK高校講座-文学国語</td><td>FM</td><td>火・水</td><td></td><td>3:00 </td><td>20</td><td>2-3</td>
 </tr>
 <tr>
-</td><td>24</td><td>NHK高校講座-保健体育</td><td>FM</td><td>木 </td><td></td><td>3:40 </td><td>20</td><td>4 </td>
+<td>24</td><td>NHK高校講座-保健体育</td><td>FM</td><td>木 </td><td></td><td>3:40 </td><td>20</td><td>4 </td>
 </tr>
 <tr>
-</td><td>25</td><td>NHK高校講座-倫理</td><td>FM</td><td>土 </td><td></td><td>3:20 </td><td>20</td><td>6 </td>
+<td>25</td><td>NHK高校講座-倫理</td><td>FM</td><td>土 </td><td></td><td>3:20 </td><td>20</td><td>6 </td>
 </tr>
 <tr>
-</td><td>26</td><td>NHK高校講座-論理国語</td><td>FM</td><td>木・金</td><td></td><td>3:20 </td><td>20</td><td>4-5</td>
+<td>26</td><td>NHK高校講座-論理国語</td><td>FM</td><td>木・金</td><td></td><td>3:20 </td><td>20</td><td>4-5</td>
 </tr>
 <tr>
-</td><td>27</td><td>NHK高校講座-論理・表現Ⅰ</td><td>FM</td><td>水 </td><td></td><td>3:40 </td><td>20</td><td>3 </td>
+<td>27</td><td>NHK高校講座-論理・表現Ⅰ</td><td>FM</td><td>水 </td><td></td><td>3:40 </td><td>20</td><td>3 </td>
 </tr>
 <tr>
-</td><td>28</td><td>NHK高校講座-仕事の現場real</td><td>FM</td><td>日 </td><td></td><td>3:00 </td><td>20</td><td>0 </td>
+<td>28</td><td>NHK高校講座-仕事の現場real</td><td>FM</td><td>日 </td><td></td><td>3:00 </td><td>20</td><td>0 </td>
 </tr>
 <tr>
-</td><td>29</td><td>NHK高校講座-言語文化</td><td>FM</td><td>土・日</td><td></td><td>3:40 </td><td>20</td><td>6-7</td>
+<td>29</td><td>NHK高校講座-言語文化</td><td>FM</td><td>土・日</td><td></td><td>3:40 </td><td>20</td><td>6-7</td>
 </tr>
 <tr>
 <td colspan="8">教養・文化、その他　　　*印は2本連続</td>
 </tr>
 <tr>
-</td><td>30</td><td>放送100年保阪正康が語る昭和人物史</td><td>AM </td><td>土 </td><td></td><td>12:15</td><td>30</td><td>6 </td>
+<td>30</td><td>放送100年保阪正康が語る昭和人物史</td><td>AM </td><td>土 </td><td></td><td>12:15</td><td>30</td><td>6 </td>
 </tr>
 <tr>
-</td><td>31</td><td>おしゃべりな古典教室* </td><td>FM</td><td>月 </td><td></td><td>3:00 </td><td>30</td><td>1 </td>
+<td>31</td><td>おしゃべりな古典教室* </td><td>FM</td><td>月 </td><td></td><td>3:00 </td><td>30</td><td>1 </td>
 </tr>
 <tr>
-</td><td>32</td><td>お話でてこい</td><td>FM</td><td>月 </td><td></td><td>2:45 </td><td>15</td><td>1 </td>
+<td>32</td><td>お話でてこい</td><td>FM</td><td>月 </td><td></td><td>2:45 </td><td>15</td><td>1 </td>
 </tr>
 <tr>
-</td><td>33</td><td>カルチャーラジオ</td><td>FM</td><td>月 </td><td></td><td>3:30 </td><td>30</td><td>1 </td>
+<td>33</td><td>カルチャーラジオ</td><td>FM</td><td>月 </td><td></td><td>3:30 </td><td>30</td><td>1 </td>
 </tr>
 <tr>
-</td><td>34</td><td>カルチャーラジオ漢詩をよむ</td><td>FM</td><td>土 </td><td></td><td>1:30 </td><td>30</td><td>6 </td>
+<td>34</td><td>カルチャーラジオ漢詩をよむ</td><td>FM</td><td>土 </td><td></td><td>1:30 </td><td>30</td><td>6 </td>
 </tr>
 <tr>
-</td><td>35</td><td>こころをよむ</td><td>FM</td><td>土 </td><td></td><td>2:00 </td><td>40</td><td>6 </td>
+<td>35</td><td>こころをよむ</td><td>FM</td><td>土 </td><td></td><td>2:00 </td><td>40</td><td>6 </td>
 </tr>
 <tr>
-</td><td>36</td><td>古典講読</td><td>FM</td><td>日 </td><td></td><td>1:15 </td><td>45</td><td>0 </td>
+<td>36</td><td>古典講読</td><td>FM</td><td>日 </td><td></td><td>1:15 </td><td>45</td><td>0 </td>
 </tr>
 <tr>
-</td><td>37</td><td>視覚障害ナビ・ラジオ</td><td>FM</td><td>土 </td><td></td><td>11:20</td><td>30</td><td>6 </td>
+<td>37</td><td>視覚障害ナビ・ラジオ</td><td>FM</td><td>土 </td><td></td><td>11:20</td><td>30</td><td>6 </td>
 </tr>
 <tr>
-</td><td>38</td><td>宗教の時間</td><td>FM</td><td>土 </td><td></td><td>1:00 </td><td>30</td><td>6 </td>
+<td>38</td><td>宗教の時間</td><td>FM</td><td>土 </td><td></td><td>1:00 </td><td>30</td><td>6 </td>
 </tr>
 <tr>
-</td><td>39</td><td>日曜カルチャー</td><td>FM</td><td>日 </td><td></td><td>2:00 </td><td>60</td><td>0 </td>
+<td>39</td><td>日曜カルチャー</td><td>FM</td><td>日 </td><td></td><td>2:00 </td><td>60</td><td>0 </td>
 </tr>
 <tr>
-</td><td>40</td><td>まいにち朗読「ラジオも秀吉!新書太閤記」</td><td>AM </td><td>月 </td><td></td><td>8:15 </td><td>15</td><td>1 </td>
+<td>40</td><td>まいにち朗読「ラジオも秀吉!新書太閤記」</td><td>AM </td><td>月 </td><td></td><td>8:15 </td><td>15</td><td>1 </td>
+</tr>
+<tr>
+<td>41</td><td>朗読の世界</td><td>FM</td><td>月〜金</td><td></td><td>21:15</td><td>15</td><td>1-5</td>
 </tr>
 </tbody>
 </table>
