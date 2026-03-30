@@ -335,7 +335,7 @@ fi
 # 開始時刻を遅延させる： 秒
 # sleep 1h 5m 50s （時間：分：秒）
 # -s 1h5m50s で変更可能: オプションの場合は「スペース」を挿入しない
-#sleep $SLPSECONDS
+sleep $SLPSECONDS
 
 DATE="$(getDateTime)" # `getDateTime`
 
