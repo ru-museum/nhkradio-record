@@ -38,10 +38,10 @@ setEdition(){
   local d=`date '+%w'`
   # 月火水: 123 => 初級編
   if test $d -gt 0 -a $d -lt 4 ; then
-     ed="初級編"
+     ed=":初級編"
   # 木金: 45 => 応用編
   elif test $d -eq 4 -o $d -eq 5 ; then
-     ed="応用編"
+     ed=":応用編"
   fi
   echo $ed
 }
@@ -341,7 +341,7 @@ DATE="$(getDateTime)" # `getDateTime`
 
 # 保存ディレクトリPATH + ファイル名
 type="m4a" # 音源ファイルタイプ 
-SAVEFILE_NAME="${SCRIPT_DIR}/${PROGRNAME}:${EDITION}-${DATE}.${type}"
+SAVEFILE_NAME="${SCRIPT_DIR}/${PROGRNAME}${EDITION}-${DATE}.${type}"
 
 # 録音しファイルを保存
 if [[ "${SAVEFILE_NAME}" ]];then
