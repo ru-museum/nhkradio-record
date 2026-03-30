@@ -35,8 +35,7 @@ getDateTime() {
 # 月火水木金土日 = 1234567
 setEdition(){
   local ed=""
-  # local d=`date '+%w'`
-  local d=3 # ●●● TEST
+  local d=`date '+%w'`
   # 月火水: 123 => 初級編
   if test $d -gt 0 -a $d -lt 4 ; then
      ed="初級編"
@@ -353,7 +352,6 @@ if [[ "${SAVEFILE_NAME}" ]];then
 
   echo "録音を開始しました......"
   ffmpeg -i "${M3U8URL}" -t "${RECTIMES}" -c copy "${SAVEFILE_NAME}"
-  # echo ffmpeg -i "${M3U8URL}" -t "${RECTIMES}" -c copy "${SAVEFILE_NAME}"
   echo "録音を終了しました。"
 else
   echo "ERROR：何らかのエラーが発生しました"
