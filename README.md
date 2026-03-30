@@ -284,7 +284,15 @@ NHKラジオ放送番組録音（AM/FM）
 50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -i 23 -d nhk 
 　　※ ファイルは指定の「nhk」に保存されます(/nhk/番組名ファイル)。
 ```
+### CRONの再起動   
+```
+# /etc/init.d/cron restart  // Debian
+ ⇨ Restarting cron (via systemctl): cron.service.
 
+或いは:
+# crontab -e  // 編集
+# service crond restart
+```
 ### 録音開始時間の微調整   
 - 回線状況や配信（放送時刻）とPCの時計の時刻が正確に合致していない場合など、録音開始時間に**誤差**の生じる場合があります。  
 - 当方の PC の内蔵時計では日本標準時との誤差は 0.2 秒でしたが、およそ**36秒**の遅延調整が必要でした。  
