@@ -8,7 +8,7 @@ NHKラジオ放送番組録音（AM/FM）
 - **nhkradio-record-lite** (旧版) は番組名指定は出来ません。
 
 ### 【CHANGE LOG】
-- **FIX**: 数ヶ所のバグその他を修正しました(2026/03/30 22:10)。  
+- **FIX**: 数ヶ所のバグその他を修正しました(2026/03/31 03:40)。  
 
 ### 【注意】
 - 2026年度のNHK番組改定（3月30日）に伴う再編（2波体制）に対応すると共に各種機能強化を行いました。  
@@ -277,15 +277,19 @@ NHKラジオ放送番組録音（AM/FM）
 # vi /etc/crontab  
 
 // 月〜金曜日 7 時 50 分に起動し 8 分間録音する。　
-50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -w am -r 00:08:00 -t ニュース・天気予報  
+50 7 * * 1-5 username bash /your/directory/nhkradio-record.sh -w am -r 00:08:00 -t ニュース・天気予報  
 
 // 「番組ID」を指定し月〜金曜日 7 時 50 分に起動し録音(番組指定により通常 15 分)する。　
-50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -i 23  
+50 7 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 23  
 　　※ ファイルは「番組名ディレクトリ」に保存されます(/番組名ディレクトリ/番組名ファイル)。
 
 // 同上「保存ディレクトリ」を指定　
-50 7 * * 1-5 username bash /your/directory/name/nhkradio-record.sh -i 23 -d nhk 
+50 7 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 23 -d nhk 
 　　※ ファイルは指定の「nhk」に保存されます(/nhk/番組名ファイル)。
+
+// 「まいにちロシア語」の設定例：遅延46秒程が必要でした　
+30 2 * * 1-5 sleep 46;username bash /your/directory/nhkradio-record.sh -i 14
+　　⇨ /まいにちロシア語/まいにちロシア語:初級編-20260331(火)02:30.m4a として保存されます。
 ```
 ### CRONの再起動   
 ```
