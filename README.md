@@ -291,8 +291,12 @@ NHKラジオ放送番組録音（AM/FM）
 　　※ ファイルは指定の「nhk」に保存されます(/nhk/番組名ファイル)。
 
 // 「まいにちロシア語」の設定例：遅延46秒程が必要でした　
-30 2 * * 1-5 sleep 46;username bash /your/directory/nhkradio-record.sh -i 14
+30 2 * * 1-5 sleep 46; username bash /your/directory/nhkradio-record.sh -i 14
 　　⇨ /まいにちロシア語/まいにちロシア語:初級編-20260331(火)02:30.m4a として保存されます。
+ 【注意】   
+  "sleep 46;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
+    Error: bad username; while reading /etc/crontab
+  30 2 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 14 -s 46
 ```
 ### CRONの再起動   
 ```
