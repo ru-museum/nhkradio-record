@@ -290,13 +290,13 @@ NHKラジオ放送番組録音（AM/FM）
 50 7 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 23 -d nhk 
 　　※ ファイルは指定の「nhk」に保存されます(/nhk/番組名ファイル)。
 
-// 「まいにちロシア語」の設定例：遅延46秒程が必要でした　
-30 2 * * 1-5 sleep 46; username bash /your/directory/nhkradio-record.sh -i 14
+// 「まいにちロシア語」の設定例：遅延50秒程が必要でした(NURO光2ギガ:東京都)　
+30 2 * * 1-5 sleep 50; username bash /your/directory/nhkradio-record.sh -i 14
 　　⇨ /まいにちロシア語/まいにちロシア語:初級編-20260331(火)02:30.m4a として保存されます。
  【注意】   
-  "sleep 46;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
+  "sleep 50;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
     Error: bad username; while reading /etc/crontab
-  30 2 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 14 -s 46
+  30 2 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 14 -s 50
 ```
 ### CRONの再起動   
 ```
@@ -308,29 +308,31 @@ NHKラジオ放送番組録音（AM/FM）
 # service crond restart
 ```
 ### 録音開始時間の微調整   
+- ライブストリーミングは、インターネット配信を行う過程で放送より遅延が生じます。  
+  参照：[らじる★らじる とは？](https://www.nhk.or.jp/radio/info/about.html) 
 - 回線状況や配信（放送時刻）とPCの時計の時刻が正確に合致していない場合など、録音開始時間に**誤差**の生じる場合があります。  
-- 当方の PC の内蔵時計では日本標準時との誤差は 0.2 秒でしたが、およそ**36秒**の遅延調整が必要でした。  
+- 当方の PC の内蔵時計では日本標準時との誤差は 0.2 秒でしたが、およそ**50秒**の遅延調整が必要でした。  
 　　[情報通信研究機構/日本標準時](https://www.nict.go.jp/JST/JST5.html)
 
 **(A)** 開始時刻を遅らせる場合：録音開始時間調整の　**sleep** の値を変更します（初期値：0）。  
 
-　【例】開始時刻を**36秒**遅らせる  
-- オプションで指定する場合：-s **36**  
-　　……/nhkradio-record.sh ……… **-s 36**  
+　【例】開始時刻を**50秒**遅らせる  
+- オプションで指定する場合：-s **50**  
+　　……/nhkradio-record.sh ……… **-s 50**  
 
 - 直接スクリプトを書き換える場合：
 ```
-SLPSECONDS=36 # 開始時刻遅延初期値： 秒
+SLPSECONDS=50 # 開始時刻遅延初期値： 秒
 
 或いは、
 
-sleep 36　  
+sleep 50　  
 ```
 - CRON でも時間の**ずれ**を修正することが出来ます。  
-　**40** 秒を設定する場合：**sleep 40;**（<strong>；</strong>に注意）  
+　**50** 秒を設定する場合：**sleep 50;**（<strong>；</strong>に注意）  
  ```
-// 月〜金曜日 7 時 50 分に起動、40 秒後に開始し 8 分間録音する。　
-50 7 * * 1-5 sleep 40; username bash /your/directory/name/nhkradio-record.sh …………  
+// 月〜金曜日 7 時 50 分に起動、50 秒後に開始し 8 分間録音する。　
+50 7 * * 1-5 sleep 50; username bash /your/directory/name/nhkradio-record.sh …………  
 ```
 
 **(B)** 開始時刻を早める場合（稀なケース）： CRON で行います（CRON の再起動が必要）。  
