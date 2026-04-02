@@ -120,13 +120,14 @@ NHKラジオ放送番組録音（AM/FM）
 　※ シェルは **bash** を使用して下さい。<br>
 　※ オプション -d  の指定の無い場合は、直下に保存されます。<br>
 　(1) NHK-AM番組を「NHKニュース」として 15 分間録音<br>
-  　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKきょうのニュース**<br>  
+  　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKニュース**<br>  
 　(2) 30分後（予約）にNHK-AM番組を「NHKニュース」として 15 分間録音しディレクトリ「audio」に保存<br>
-  　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKニュース -d audio -s 30m**<br>  
-　(3) 番組表による「番組ID」を指定し 5 分 30 秒後に録音（予約）<br>
-　　　※ ファイルは「番組名ディレクトリ」に保存されます(/番組名ディレクトリ/番組名ファイル)。<br>
-  　　 $ **bash ./nhkradio-record.sh -i 4 -s 5m30s**<br>    
-
+  　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKニュース -d audio -s 30m**<br>
+　　  ※ ファイルは指定の「audio」に保存されます( /**audio**/録音ファイル.m4a )。  
+    
+　(3) 番組表による「番組ID」(14:まいにちロシア語)を指定し 5 分 30 秒後に録音（予約）  
+  　　 $ **bash ./nhkradio-record.sh -i 14 -s 5m30s**  
+　  　※ ファイルは「番組名ディレクトリ」に保存されます( /**まいにちロシア語**/録音ファイル.m4a )。
 ## 番組表
 <table>
 <tr>
@@ -276,9 +277,8 @@ NHKラジオ放送番組録音（AM/FM）
 - CRON を使い定期的に自動定時録音が可能です。
 - **username** には通常 root か ユーザー名 が入ります。  
 　※ シェルは **bash** を指定して下さい。
+### /etc/crontab の編集   
 ```
-# vi /etc/crontab  
-
 // 月〜金曜日 7 時 50 分に起動し 8 分間録音する。　
 50 7 * * 1-5 username bash /your/directory/nhkradio-record.sh -w am -r 00:08:00 -t ニュース・天気予報  
 
