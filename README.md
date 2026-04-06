@@ -8,7 +8,7 @@ NHKラジオ放送番組録音（AM/FM）
 - **nhkradio-record-lite** (旧版) は番組名指定は出来ません。
 
 ### 【CHANGELOG】
-- **FIX**：バグその他を修正しました(2026/04/02 06:30)。  
+- **FIX**：バグその他を修正しました(2026/04/06 08:30)。  
 
 ### 【注意】
 - 2026年度のNHK番組改定（3月30日）に伴う再編（2波体制）に対応すると共に各種機能強化を行いました。  
@@ -123,13 +123,13 @@ NHKラジオ放送番組録音（AM/FM）
   　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKニュース**<br>  
 　(2) 30分後（予約）にNHK-AM番組を「NHKニュース」として 15 分間録音しディレクトリ「audio」に保存<br>
   　　 $ **bash ./nhkradio-record.sh -w am -r 00:15:00 -t NHKニュース -d audio -s 30m**<br>
-　　  ※ ファイルは指定の「audio」に保存されます( /**audio**/録音ファイル.m4a )。  
+　　   　⇨ / **audio** / 録音ファイル.m4a  
     
 　(3) 番組表による「番組ID」(14:まいにちロシア語)を指定し 5 分 30 秒後に録音（予約）  
   　　 $ **bash ./nhkradio-record.sh -i 14 -s 5m30s**  
-　  　※ ファイルは「番組名ディレクトリ」に保存されます( /**まいにちロシア語**/録音ファイル.m4a )。  
+　  　 　⇨ / **まいにちロシア語** / 録音ファイル.m4a  
   　　 $ **bash ./nhkradio-record.sh -i 14 -d russian -s 5m30s**  
-　  　※ ディレクトリ指定の場合は、ディレクトリ「russian」に保存されます( /**russian**/録音ファイル.m4a )。
+　  　 　⇨ / **russian** / 録音ファイル.m4a
 ## 番組表
 <table>
 <tr>
@@ -185,7 +185,7 @@ NHKラジオ放送番組録音（AM/FM）
 <td>14</td><td>まいにちロシア語</td><td>FM</td><td>月〜金</td><td>初/応</td><td>2:30 </td><td>15</td><td>1-5</td>
 </tr>
 <tr>
-<td>15</td><td>ポルトガル語講座-入門/ステップアップ</td><td>FM</td><td>日 </td><td></td><td>1:00 </td><td>15</td><td>0 </td>
+<td>15</td><td>ポルトガル語</td><td>FM</td><td>日 </td><td></td><td>1:00 </td><td>15</td><td>0 </td>
 </tr>
 <tr>
 <td colspan="8">NHK高校講座</td>
@@ -273,6 +273,7 @@ NHKラジオ放送番組録音（AM/FM）
 </tr>
 </tbody>
 </table>
+※ ポルトガル語講座は、入門（４月〜９月）とステップアップ（１０月〜３月）とに分かれています。
 
 # 定時録音
   
