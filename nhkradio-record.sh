@@ -51,7 +51,7 @@ setEdition(){
 # ポルトガル語講座別処理：入門, ステップアップ
 setPortuguese(){
   local ed=""
-  d=`date '+%-m'`
+  local d=`date '+%-m'`
   #  "ポルトガル語入門" 4月 - 9月
   if [[ "${d}" -gt 3 ]] || [[ "${d}" -lt 10 ]]; then 
     ed="入門"
