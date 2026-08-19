@@ -13,8 +13,8 @@ set -euo pipefail
 # の2波に再編されました。
 # 
 # ストリーミング配信URL
-#  AM: https://simul.drdi.st.nhk/live/3/joined/master.m3u8
-#  FM: https://simul.drdi.st.nhk/live/5/joined/master.m3u8
+#  AM: https://simul2.drdi.st.nhk/live/3/joined/master.m3u8
+#  FM: https://simul2.drdi.st.nhk/live/5/joined/master.m3u8
 # 放送波URLは以下で取得出来ます。
 #  https://www.nhk.or.jp/radio/config/config_web.xml
 
