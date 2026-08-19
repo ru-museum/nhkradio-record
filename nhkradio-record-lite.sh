@@ -18,7 +18,7 @@ set -euo pipefail
 # 放送波URLは以下で取得出来ます。
 #  https://www.nhk.or.jp/radio/config/config_web.xml
 
-URLHEAD="https://simul.drdi.st.nhk/live"
+URLHEAD="https://simul2.drdi.st.nhk/live"
 URLTAIL="master.m3u8"
 # NHKラジオ放送：AM、FM
 declare -A NHK_URIS=(
