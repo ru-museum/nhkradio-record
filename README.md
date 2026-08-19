@@ -9,7 +9,9 @@ NHKラジオ放送番組録音（AM/FM）
 
 ### 【CHANGELOG】
 - **FIX**：バグその他を修正しました(2026/04/06 08:30)。  
-
+- **FIX**：ストリーミング配信URLが変更された為、修正を行いました(2026-08-20)。  
+ 　　※ 配信URLは**時々変更されることがあります**ので、保存されなくなった時には確認を行って下さい。
+  
 ### 【注意】
 - 2026年度のNHK番組改定（3月30日）に伴う再編（2波体制）に対応すると共に各種機能強化を行いました。  
 [ラジオ再編](https://www.nhk.or.jp/radio/saihen/)  
@@ -296,11 +298,15 @@ NHKラジオ放送番組録音（AM/FM）
 // 「まいにちロシア語」の設定例：遅延50秒程が必要でした(NURO光2ギガ:東京都)　
 30 2 * * 1-5 sleep 50; username bash /your/directory/nhkradio-record.sh -i 14
 　　⇨ /まいにちロシア語/まいにちロシア語:初級編-20260331(火)02:30.m4a として保存されます。
- 【注意】   
-  "sleep 50;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
-    Error: bad username; while reading /etc/crontab
-  30 2 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 14 -s 50
 ```
+ ### 【注意】   
+ (1) "sleep 50;" の記法で以下のエラーが出て録音に失敗する場合は、オプション -s を使用して下さい。  
+　　　Error: bad username; while reading /etc/crontab  
+　　　30 2 * * 1-5 username bash /your/directory/nhkradio-record.sh -i 14 -s 50  
+
+  (2) Debian 系では命名規則により、「**実行ファイル名に . (ピリオド) を含めてはならない**」とあり、  
+  　　CRON で動作しない場合は、拡張子の **.sh** を除外し **nhkradio-record** としてみて下さい。   
+
 ### CRONの再起動   
 ```
 # /etc/init.d/cron restart  // Debian
@@ -311,7 +317,7 @@ NHKラジオ放送番組録音（AM/FM）
 # service crond restart
 ```
 ### 録音開始時間の微調整   
-- ライブストリーミングは、インターネット配信を行う過程で放送より遅延が生じます。  
+- ライブストリーミングは、インターネット配信を行う過程で実放送より遅延が生じます。  
   参照：[らじる★らじる とは？](https://www.nhk.or.jp/radio/info/about.html) 
 - 回線状況や配信（放送時刻）とPCの時計の時刻が正確に合致していない場合など、録音開始時間に**誤差**の生じる場合があります。  
 - 当方の PC の内蔵時計では日本標準時との誤差は 0.2 秒でしたが、およそ**50秒**の遅延調整が必要でした。  
@@ -361,14 +367,11 @@ $ bash ./nhkradio-record.sh -w am -r 00:00:10 -t NHK番組録音テスト
 - 保存された **m4a** は音声データフォーマットであり、iTunes や通常のプレイヤーで視聴出来ます。 
 
 # 注意  
-- ストリーミング配信URLは変更されています。  
-<!--
-旧URL: "https://nhkradioakr2-i.akamaihd.net/hls/live/511929/1-r2/1-r2-01.m3u8"  
-新URL: "https://radio-stream.nhk.jp/hls/live/2023501/nhkradiruakr2/master.m3u8"
--->
+- ストリーミング配信URLは変更されています(2026-08-20)。  
+　simul => simul**2**   
 　【東京の場合】  
-　　　AM: https://simul.drdi.st.nhk/live/3/joined/master.m3u8  
-　　　FM: https://simul.drdi.st.nhk/live/5/joined/master.m3u8  
+　　　AM: https://simul2.drdi.st.nhk/live/3/joined/master.m3u8  
+　　　FM: https://simul2.drdi.st.nhk/live/5/joined/master.m3u8  
   　　※ 回線の都合等、他地域からの配信が必要な場合は、以下でURIを取得出来ます。  
     　　　ソース内の**番号部分**を変更して下さい。  
   　　　https://www.nhk.or.jp/radio/config/config_web.xml
